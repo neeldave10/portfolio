@@ -22,7 +22,7 @@ const otherProjects = [
   },
   {
     name: "Customer Sentiment Analysis for Service Feedback",
-    description: "•	Built a speech-to-text sentiment analysis pipeline using Python to process customer feedback, extracting satisfaction scores and categorizing customers into High Satisfaction, Neutral, and Upset segments.",
+    description: "Built a speech-to-text sentiment analysis pipeline using Python to process customer feedback, extracting satisfaction scores and categorizing customers into High Satisfaction, Neutral, and Upset segments.",
     link: "https://github.com/neeldave10/Customer-Engagement-Improver"
   }
 ];
@@ -31,7 +31,6 @@ const Projects = () => {
   const [dashboardData, setDashboardData] = useState([]);
   const [particles, setParticles] = useState([]);
 
-  // Generate streaming data + particles
   useEffect(() => {
     const interval = setInterval(() => {
       const newData = generateMockData();
@@ -42,7 +41,6 @@ const Projects = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Auto remove old particles
   useEffect(() => {
     const interval = setInterval(() => {
       setParticles((prev) => prev.slice(1));
@@ -53,12 +51,11 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-20 max-w-7xl mx-auto px-6 relative z-10">
-      
       <h2 className="text-4xl font-bold mb-12 text-yellow-300 text-center">
         Projects
       </h2>
 
-      {/* ================= FEATURED PROJECT ================= */}
+      {/* FEATURED PROJECT */}
       <div className="bg-gradient-to-r from-purple-800 via-pink-700 to-indigo-900 p-10 rounded-3xl shadow-2xl mb-20 relative overflow-hidden">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -77,17 +74,17 @@ const Projects = () => {
               <a
                 href="https://github.com/neeldave10/hommies"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:scale-105 transition"
               >
                 View on GitHub
               </a>
-              <a
-                href="#"
+              <button
+                onClick={() => alert("Live demo coming soon!")}
                 className="px-6 py-3 bg-white text-black font-bold rounded-lg hover:scale-105 transition"
               >
                 Live Demo
-              </a>
+              </button>
             </div>
           </div>
 
@@ -101,9 +98,8 @@ const Projects = () => {
         </motion.div>
       </div>
 
-      {/* ================= PIPELINE SECTION ================= */}
+      {/* PIPELINE SECTION */}
       <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-black p-10 rounded-3xl shadow-2xl mb-20">
-
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -111,7 +107,6 @@ const Projects = () => {
           className="bg-black/40 p-8 rounded-xl shadow-2xl"
         >
           <div className="flex items-center justify-between flex-col lg:flex-row gap-10">
-
             {/* DATA SOURCE */}
             <div className="flex flex-col items-center">
               <h3 className="text-xl font-bold text-white mb-4">Data Source</h3>
@@ -156,7 +151,6 @@ const Projects = () => {
             {/* DASHBOARD */}
             <div className="flex flex-col items-center">
               <h3 className="text-xl font-bold text-white mb-4">Dashboard</h3>
-
               <div className="w-72 h-72 bg-white rounded-lg shadow p-4">
                 <p className="text-gray-800 font-semibold">
                   Latest Users: {dashboardData[dashboardData.length - 1]?.users || 0}
@@ -167,7 +161,6 @@ const Projects = () => {
                 <p className="text-gray-800 font-semibold">
                   Errors: {dashboardData[dashboardData.length - 1]?.errors || 0}
                 </p>
-
                 <LineChart
                   width={260}
                   height={160}
@@ -183,19 +176,18 @@ const Projects = () => {
                 </LineChart>
               </div>
             </div>
-
           </div>
         </motion.div>
       </div>
 
-      {/* ================= OTHER PROJECTS ================= */}
+      {/* OTHER PROJECTS */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {otherProjects.map((proj, i) => (
           <motion.a
             key={i}
             href={proj.link}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="bg-black/30 p-6 rounded-lg shadow-lg hover:scale-105 transition flex flex-col justify-between"
             whileHover={{ scale: 1.05 }}
           >
@@ -207,7 +199,6 @@ const Projects = () => {
           </motion.a>
         ))}
       </div>
-
     </section>
   );
 };

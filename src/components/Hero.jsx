@@ -26,9 +26,28 @@ const Hero = () => {
         transition={{ delay: 1, duration: 1 }}
         className="flex space-x-6"
       >
-        <a href="mailto:neeldave77@gmail.com" className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:scale-105 transition">Email Me</a>
-        <a href="https://github.com/neeldave10" target="_blank" className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg hover:scale-105 transition">GitHub</a>
-        <a href="https://linkedin.com/in/neel-rakesh-dave" target="_blank" className="px-6 py-3 bg-blue-700 text-white font-bold rounded-lg hover:scale-105 transition">LinkedIn</a>
+        <a 
+          href="mailto:neeldave77@gmail.com" 
+          className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:scale-105 transition"
+        >
+          Email Me
+        </a>
+        <a 
+          href="https://github.com/neeldave10" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg hover:scale-105 transition"
+        >
+          GitHub
+        </a>
+        <a 
+          href="https://linkedin.com/in/neel-rakesh-dave" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="px-6 py-3 bg-blue-700 text-white font-bold rounded-lg hover:scale-105 transition"
+        >
+          LinkedIn
+        </a>
       </motion.div>
     </section>
   );
