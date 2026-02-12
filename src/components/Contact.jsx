@@ -38,10 +38,10 @@ const Contact = () => {
           <div className="flex items-center justify-center space-x-3 text-white animate-fadeInUp delay-300">
             <FaGithub className="text-yellow-400 w-6 h-6 animate-bounce-slow" />
             <a
-              href="https://github.com/neeldave10"
-              target="_blank"
-              className="text-blue-400 hover:underline transition-transform duration-300"
-            >
+  href="https://github.com/neeldave10"
+  target="_blank"
+  rel="noopener noreferrer"
+>
               github.com/neeldave10
             </a>
           </div>
@@ -49,10 +49,10 @@ const Contact = () => {
           <div className="flex items-center justify-center space-x-3 text-white animate-fadeInUp delay-400">
             <FaLinkedin className="text-yellow-400 w-6 h-6 animate-bounce-slow" />
             <a
-              href="https://linkedin.com/in/neel-rakesh-dave"
-              target="_blank"
-              className="text-blue-400 hover:underline transition-transform duration-300"
-            >
+  href="https://linkedin.com/in/neel-rakesh-dave"
+  target="_blank"
+  rel="noopener noreferrer"
+>
               linkedin.com/in/neel-rakesh-dave
             </a>
           </div>
